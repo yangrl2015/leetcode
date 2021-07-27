@@ -14,11 +14,8 @@ public class FooBar {
     }
 
     public void foo(Runnable printFoo) throws InterruptedException {
-
         for (int i = 0; i < n; i++) {
-
             // printFoo.run() outputs "foo". Do not change or remove this line.
-
             synchronized(obj) {
                 while(flag %2 != 0) obj.wait();
                 printFoo.run();
